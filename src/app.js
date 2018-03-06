@@ -2,11 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./app.scss";
 
-class Hello extends React.Component {
+import { Hello } from './hello.js';
+
+class Container extends React.Component {
     render() {
-        return React.createElement('h1', null, 'Hello');
+        return (
+            < Hello where='World' className='container' >
+            </ Hello >
+        )
     }
 }
 
-ReactDOM.render(React.createElement(Hello, null), document.getElementById('hello'));
+ReactDOM.render(< Container />, document.getElementById('hello'));
 
